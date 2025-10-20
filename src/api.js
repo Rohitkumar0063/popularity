@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE =  'http://localhost:8080';
+const API_BASE = "https://my-backend.up.railway.app";
+
 // Remove /api from the base URL ↑
 
 export const getUsers = async () => {
