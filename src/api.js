@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const API_BASE = process.env.REACT_APP_API_URL || 'https://spring-backend-production-5592.up.railway.app';
 
 export const getUsers = async () => {
@@ -15,6 +14,9 @@ export const getUsers = async () => {
     return response.data;
   } catch (error) {
     console.error('Error fetching users:', error);
+    console.error('Error response:', error.response);
+    console.error('Error message:', error.message);
+    console.error('Error code:', error.code);
     return [];
   }
 };
