@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
+const API_BASE = process.env.REACT_APP_API_URL || 'https://spring-backend-production-5592.up.railway.app';
 
 export const getUsers = async () => {
   try {
