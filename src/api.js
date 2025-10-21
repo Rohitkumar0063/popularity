@@ -1,14 +1,11 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.REACT_APP_API_URL; // set in Netlify Environment Variables
-axios.get(`${API_BASE}/users`)
 
-
-
+const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
 
 export const getUsers = async () => {
   try {
-    const url = `${API_BASE}/users`;  // Now this calls /users/
+    const url = `${API_BASE}/users`;
     console.log('Making API call to:', url);
 
     const response = await axios.get(url);
