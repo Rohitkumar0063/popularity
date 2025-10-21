@@ -1,12 +1,14 @@
 import axios from 'axios';
 
-const API_BASE = "https://my-backend.up.railway.app";
+const API_BASE = import.meta.env.VITE_API_URL; // set in Netlify Environment Variables
+axios.get(`${API_BASE}/users`)
 
-// Remove /api from the base URL ↑
+
+
 
 export const getUsers = async () => {
   try {
-    const url = `${API_BASE}/users/`;  // Now this calls /users/
+    const url = `${API_BASE}/users`;  // Now this calls /users/
     console.log('Making API call to:', url);
 
     const response = await axios.get(url);
