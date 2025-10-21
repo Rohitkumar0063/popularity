@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlow, { MiniMap, Background, Controls } from 'react-flow-renderer';
-import { getUsers } from '../api';
+import { getUsers } from '../api.js';
 import 'react-flow-renderer/dist/style.css';
 import 'react-flow-renderer/dist/theme-default.css';
 
@@ -23,7 +23,7 @@ const FlowCanvas = () => {
           id: user.stringId,
           type: 'default',
           data: { label: user.username },
-          position: { x: 150 * index, y: 100 }, // spacing nodes horizontally
+          position: { x: 150 * index, y: 100 },
         });
 
         // Build edges for friends
